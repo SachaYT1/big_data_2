@@ -17,7 +17,7 @@ pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 
 # Package the virtual env.
-venv-pack -o .venv.tar.gz
+venv-pack -o .venv.tar.gz --force
 
 # Collect data
 bash prepare_data.sh
