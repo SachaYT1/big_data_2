@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Mapper for inverted index: reads doc_id\ttitle\ttext, emits term\tdoc_id."""
+"""Mapper for document statistics: reads doc_id\ttitle\ttext, emits doc_id\ttitle\tdoc_length."""
 import sys
 import re
 
@@ -16,5 +16,5 @@ for line in sys.stdin:
     if len(parts) < 3:
         continue
     doc_id, title, text = parts
-    for term in tokenize(text):
-        print(f"{term}\t{doc_id}")
+    doc_length = len(tokenize(text))
+    print(f"{doc_id}\t{title}\t{doc_length}")
