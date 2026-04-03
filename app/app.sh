@@ -28,3 +28,9 @@ bash index.sh
 
 # Run the ranker
 bash search.sh "this is a query!"
+
+echo "Pipeline complete. Container is ready for interactive queries."
+echo "Usage: bash search.sh '<your query>'"
+
+# Keep container alive for interactive queries
+tail -f /dev/null

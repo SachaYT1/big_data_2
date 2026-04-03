@@ -18,8 +18,7 @@ services:
     hostname: cluster-master
     tty: true
     working_dir: /app
-    # You can comment the entrypoint to run the script manually inside the container
-    entrypoint: 
+    entrypoint:
       - bash
       - /app/app.sh
     
